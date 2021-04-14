@@ -1,0 +1,45 @@
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <!-- <th scope="col">fname</th>
+        <th scope="col">lname</th>
+        <th scope="col">address</th>
+        <th scope="col">city</th>
+        <th scope="col">zipcode</th>
+        <th scope="col">fullname</th>
+        <th scope="col">email</th>
+        <th scope="col">title</th>
+        <th scope="col">phone</th> -->
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">City</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contactList">
+        <td>{{contact.id}}</td>
+        <!-- <td>{{contact.fname}}</td>
+        <td>{{contact.lname}}</td>
+        <td>{{contact.address}}</td>
+        <td>{{contact.city}}</td>
+        <td>{{contact.zipcode}}</td>
+        <td>{{contact.fullname}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.title}}</td>
+        <td>{{contact.phone}}</td> -->
+        <td>{{contact.fullname}}</td>
+        <td>{{contact.address}}</td>
+        <td>{{contact.city}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.phone}}</td>
+        <td>
+          <i-feather name="edit" (click)="viewContact(contact.id)">Edit</i-feather>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
